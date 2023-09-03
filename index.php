@@ -4,10 +4,23 @@ $apiToken = 'spacextest';
 
 $spaceXApiUrl = 'https://api.spacexdata.com/v4/rockets';
 
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    // Set CORS headers for the preflight request.
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization');
+    exit;
+}
+
 // Check if the request method is GET.
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/rockets') {
     // Check if an "Authorization" header is present and matches the token.
     if (isset($_SERVER['HTTP_AUTHORIZATION']) && $_SERVER['HTTP_AUTHORIZATION'] === 'Bearer ' . $apiToken) {
+        // set cors
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization');
+
         // Initialize cURL session.
         $curl = curl_init();
 
