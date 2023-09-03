@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-	const githubUrl = "https://github.com/your-github-profile";
-	const linkedinUrl = "https://linkedin.com/in/your-linkedin-profile";
+	const githubUrl = "https://github.com/iyke-beezy";
+	const linkedinUrl = "www.linkedin.com/in/isaac-botwe-5bb926153";
 
 	return (
 		<footer className="text-white text-center">
