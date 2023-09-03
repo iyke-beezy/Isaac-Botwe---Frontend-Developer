@@ -1,8 +1,32 @@
-# React + Vite
+# SpaceX Clone using SpaceX open-sourced data on https://docs.spacexdata.com/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a space X mini clone project demonstrating how to use React, Redux, Framer-Motion and PHP to create awesome web apps.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js and npm (Node Package Manager) must be installed on your computer. You can download and install them from [nodejs.org](https://nodejs.org/).
+
+- PHP must be installed and the path added to your path variables.
+
+### Installing
+
+1. Clone the repository to your local machine using the following command: git clone https://github.com/iyke-beezy/Isaac-Botwe---Frontend-Developer.git
+
+2. Change into the project directory:
+
+3. Install the project dependencies: npm i
+
+4. Update your PHP.ini files by uncommenting the line extensions=curl
+
+### Running the Application
+
+After the installation is complete, you can run the application using the following commands in different bash sessions:
+
+```bash
+php -S localhost:8080
+npm run dev
+
