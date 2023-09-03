@@ -9,7 +9,7 @@ const App = () => (
 		<section className="bg-black padding">
 			<Rockets />
 		</section>
-		<section className="bg-white padding-x padding-t pb-8">
+		<section className="bg-black padding-x padding-t pb-8">
 			<Footer />
 		</section>
 	</main>

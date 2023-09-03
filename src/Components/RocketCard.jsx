@@ -8,7 +8,7 @@ const RocketCard = (props) => {
 	return (
 		<div className="flex flex-1 flex-col w-full sm:w-full">
 			<motion.img
-				src=""
+				src={props.flickr_images[0]}
 				alt=""
 				className="w-[280px] h-[280px] mb-10 cursor-pointer rounded-tr-lg rounded-bl-lg"
 				onClick={() => setShowModal(true)}

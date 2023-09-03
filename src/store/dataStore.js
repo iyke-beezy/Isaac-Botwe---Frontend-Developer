@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// Define an initial state for your data
+//define an initial state
 const initialState = {
 	items: [],
 	status: "idle",
 	error: null,
 };
 
-// Create an async thunk to fetch data from the API
+
 export const fetchItems = createAsyncThunk("data/fetchItems", async () => {
 	// eslint-disable-next-line no-useless-catch
 	try {
