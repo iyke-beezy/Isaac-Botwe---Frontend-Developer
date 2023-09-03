@@ -7,12 +7,11 @@ const initialState = {
 	error: null,
 };
 
-
 export const fetchItems = createAsyncThunk("data/fetchItems", async () => {
 	// eslint-disable-next-line no-useless-catch
 	try {
 		const response = await fetch("http://localhost:8080/rockets", {
-			headers: {Authorization: "Bearer spacextest"}
+			headers: { Authorization: "Bearer spacextest" },
 		});
 		const data = await response.json();
 		return data;

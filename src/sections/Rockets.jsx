@@ -11,50 +11,51 @@ const Rockets = () => {
 	// fetch data from api
 	const dispatch = useDispatch();
 	const { items, status, error } = useSelector((state) => state.data);
-
 	// search bar and filter
-	const [data, setData] = useState(rockets);
-	const [filteredData, setFilteredData] = useState(rockets);
+	const [data, setData] = useState(items);
+	const [filteredData, setFilteredData] = useState(items);
 
-	// useEffect(() => {
-	// 	if (status === "idle") {
-	// 		dispatch(fetchItems());
-	// 	}
-	// }, [dispatch, status]);
+	const [currentPage, setCurrentPage] = useState(1);
 
-	// if (status === "loading") {
-	// 	return <div>Loading...</div>;
-	// }
+	useEffect(() => {
+		if (status === "idle") {
+			dispatch(fetchItems());
+		}
+		if (status === "succeeded") setFilteredData(items);
+	}, [dispatch, status]);
 
-	// if (status === "failed") {
-	// 	return <div>Error: {error}</div>;
-	// }
+	if (status === "loading") {
+		return <div>Loading...</div>;
+	}
+
+	if (status === "failed") {
+		return <div>Error: {error}</div>;
+	}
 
 	const handleSearch = (searchTerm, selectedFilter) => {
-		const filtered = data.filter((item) =>
+		const filtered = items.filter((item) =>
 			item[selectedFilter]
 				.toString()
 				.toLowerCase()
 				.includes(searchTerm.toLowerCase())
 		);
-		console.log(filtered);
+
 		setFilteredData(filtered);
 	};
 
 	const handleFilterChange = (selectedFilter, searchTerm) => {
-		const filtered = data.filter((item) =>
+		const filtered = items.filter((item) =>
 			item[selectedFilter]
 				.toString()
 				.toLowerCase()
 				.includes(searchTerm.toLowerCase())
 		);
-		console.log(filtered);
+
 		setFilteredData(filtered);
 	};
 
 	// paginated grid
 	const itemsPerPage = 4; // Number of items to display per page
-	const [currentPage, setCurrentPage] = useState(1);
 
 	const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 	// Calculate the range of items to display on the current page
@@ -97,7 +98,7 @@ const Rockets = () => {
 			{/* search button */}
 			<div>
 				<SearchBar
-					data={data}
+					data={items}
 					onSearch={handleSearch}
 					onFilterChange={handleFilterChange}
 				/>
