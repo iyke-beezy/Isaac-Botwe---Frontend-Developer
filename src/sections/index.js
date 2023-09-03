@@ -1,9 +1,9 @@
 import Banner from "./banner";
-import Capsules from './Capsules';
+import Rockets from './Rockets';
 import Footer from "./Footer";
 
 export {
     Banner,
-    Capsules,
+    Rockets,
     Footer
 };
