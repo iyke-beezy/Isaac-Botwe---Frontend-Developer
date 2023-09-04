@@ -29,6 +29,6 @@ After the installation is complete, you can run the application using the follow
 ```bash
 php -S localhost:8080
 npm run dev
-```bash
+```
 
 [Watch the demo](https://1drv.ms/v/s!Ap2j0kZQ56J-hS5slqEV43dexdub?e=syPNAH)
