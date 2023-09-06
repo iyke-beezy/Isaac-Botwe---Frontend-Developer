@@ -44,7 +44,7 @@ const RocketModal = (props) => {
 		<section className="transition ease-in-out delay-150 ">
 			<div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
 				<div className="relative w-full my-6 mx-auto max-w-screen-xl">
-					<div className="border-0 rounded-lg shadow-lg relative flex min-h-full flex-col w-full backdrop-blur-xl bg-white/30 outline-none focus:outline-none">
+					<div className="border-0 rounded-lg shadow-lg relative flex min-h-full flex-col w-full backdrop-blur-xl bg-black/30 outline-none focus:outline-none">
 						<div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
 							<h3 className="text-3xl font=semibold">General Info</h3>
 							<button
